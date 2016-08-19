@@ -3,8 +3,10 @@ package com.zhengjy.test.io.pipedInputStream;
 import java.io.IOException;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
-
-public class PipedStreamTest {
+/**
+ * 管道输入流的缓冲区默认大小是1024字节
+ */
+public class PipedStreamMain {
 	public static void main(String[] args) {
 		Sender sender = new Sender();
 		Receiver receiver = new Receiver();

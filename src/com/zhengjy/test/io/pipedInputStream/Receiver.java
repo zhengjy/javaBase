@@ -25,7 +25,9 @@ public class Receiver extends Thread{
 	
 	 @Override
 	 public void run() {
-		readMessageOnce(); 
+		//readMessageOnce(); 
+		
+		readMessageContinued(); 
 	 }
 
 
@@ -44,29 +46,29 @@ public class Receiver extends Thread{
 	
 	public void readMessageContinued(){
 		int total =0;
-		while(true){
-			byte[] b = new byte[1024];
-			try {
+		byte[] b = new byte[1024];
+		try {
+			while(true){
 				int  len =pin.read(b);
 				total +=len;
 				System.out.println(new String(b,0,len));
 				if(total >1024){
 					break;
 				}
-				
-			} catch (IOException e) {
-				e.printStackTrace();
-			}finally{
-				try {
-					pin.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
 			}
 			
-			
-			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				pin.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
+			
+			
+			
 		
 	}
 	
