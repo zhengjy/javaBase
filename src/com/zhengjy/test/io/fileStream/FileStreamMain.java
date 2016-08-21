@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class FileStreamMain {
-	private static final String fileName = "file.txt";
+	private static final String fileName = "C:\\file.txt";
 	public static void main(String[] args) {
 		testWrite();
 		testRead();
@@ -18,7 +18,14 @@ public class FileStreamMain {
 		try {
 			//创建file.txt，默认是关闭"追加模式"
 			FileOutputStream fos1 = new FileOutputStream(file);
-			fos1.write("abcdefghijklmnopqrstuvwxyz".getBytes());
+			Integer len =0;
+			for(;;){
+				if(len >10000){
+					break;
+				}
+				len++;
+				fos1.write(len);
+			}
 			fos1.close();
 			//创建文件file.txt对应的FileOutputStream对象，打开"追加模式"
 			FileOutputStream fos2 = new FileOutputStream(file,true);
