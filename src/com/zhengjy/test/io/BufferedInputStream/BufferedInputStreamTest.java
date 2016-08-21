@@ -118,7 +118,7 @@ public class BufferedInputStreamTest extends FilterInputStream {
 		return 0;
 	}
 
-	public synchronized void mark(int readlimit) {
+	public synchronized void mark (int readlimit) {
         marklimit = readlimit;
         markpos = pos;
     }
@@ -148,7 +148,7 @@ public class BufferedInputStreamTest extends FilterInputStream {
 				//) 新建一个字节数组nbuf。nbuf的大小是“pos*2”和“marklimit”中较小的那个数。
 				byte[] nbuf = new byte[nsz];
 				System.arraycopy(buffer, 0, nbuf, 0,pos);
-				if(!bufUpdater.compareAndSet(this,buffer,buf)){
+				if(!bufUpdater.compareAndSet(this,buffer,nbuf)){
 					throw new IOException("Stream closed");
 				}
 			}

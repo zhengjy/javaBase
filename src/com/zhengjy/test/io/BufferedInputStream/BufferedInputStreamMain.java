@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class BufferedInputStreamMain {
-/*	public static void main(String[] args) throws IOException {
-		File file = new File("C:\\file.txt");
-		BufferedInputStream in  = new BufferedInputStream(new FileInputStream(file),20);
+	/*public static void main(String[] args) throws IOException {
+		File file = new File("C:\\1.txt");
+		BufferedInputStreamTest in  = new BufferedInputStreamTest(new FileInputStream(file),20);
 		byte[] b = new byte[1024];
 		int i =0;
 		for(;;){
@@ -43,7 +43,7 @@ public class BufferedInputStreamMain {
 
         // 创建BufferedInputStream字节流，内容是ArrayLetters数组
         try {
-            File file = new File("C:\\file.txt");
+            File file = new File("C:\\1.txt");
             InputStream in =
                   new BufferedInputStream(
                       new FileInputStream(file), 512);
@@ -66,7 +66,7 @@ public class BufferedInputStreamMain {
               
             // 标记“当前索引位置”，即标记第6个位置的元素--“f”
             // 1024对应marklimit
-            in.mark(10);
+            in.mark(1024);
 
             // 跳过22个字节。
            // in.skip(22);
@@ -78,6 +78,8 @@ public class BufferedInputStreamMain {
             String str1 = new String(buf);
             System.out.printf("str1=%s\n", str1);
 
+          
+            
             // 重置“输入流的索引”为mark()所标记的位置，即重置到“f”处。
             in.reset();
             // 从“重置后的字节流”中读取5个字节到buf中。即读取“fghij”
@@ -85,7 +87,11 @@ public class BufferedInputStreamMain {
             // 将buf转换为String字符串。
             String str2 = new String(buf);
             System.out.printf("str2=%s\n", str2);
-
+            
+            
+            
+            
+         
             in.close();
        } catch (FileNotFoundException e) {
            e.printStackTrace();

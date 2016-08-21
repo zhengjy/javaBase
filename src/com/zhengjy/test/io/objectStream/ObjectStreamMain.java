@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class ObjectStreamMain {
-	private static final String temp = "boxxx.tmp";
+	private static final String temp = "C:\\1.txt";
 	public static void main(String[] args) throws Exception {
 		testWrite();
 		testRead();
