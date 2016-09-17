@@ -1,4 +1,4 @@
-package com.zhengjy.test.thread;
+package com.zhengjy.test.thread.callable;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
