@@ -14,10 +14,8 @@ public class FinancialReportManager implements IReportManager{//财务报表
 
 	@Override
 	public String createReport() {
-		// TODO Auto-generated method stub
 		return "This is a financial report";
 	}
-	
 
 }
 

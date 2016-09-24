@@ -9,6 +9,7 @@ public class Test {
 		w.addWatched(w1);
 		w.addWatched(w2);
 		w.addWatched(w3);
+		w.removeWatched(w3);
 		w.notifyWatched("xxx");
 	}
 }

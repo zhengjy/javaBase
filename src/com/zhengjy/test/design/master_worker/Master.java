@@ -19,7 +19,7 @@ public class Master {
 	//是否所有的子任务都结束了
 	public  boolean isComplete(){
 		for(Map.Entry<String,Thread> entry :threadMap.entrySet()){
-			if(entry.getValue().getState() != Thread.State.TERMINATED){
+			if(entry.getValue().getState() != Thread.State.TERMINATED){ 
 				return false;
 			}
 		}

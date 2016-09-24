@@ -10,7 +10,8 @@ public class Test {
 		FutureTask<String> future = new FutureTask<String>(new RealData("a"));
 		ExecutorService executor = Executors.newFixedThreadPool(1);
 		//执行FutureTask，	
-		executor.submit(future);
+		executor.submit(future);//提交异步任务，
+		//主方法执行
 		System.out.println("执行完毕");
 		try {
 			Thread.sleep(2000);

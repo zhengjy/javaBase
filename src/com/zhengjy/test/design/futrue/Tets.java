@@ -10,7 +10,6 @@ public class Tets {
 		Client c = new Client();
 		//这里会理解返回，因为得到的是FutureData而不是RealData
 		Data d = c.request("name");
-		System.out.println("请求完毕");
 		try {
 			/*
 			 * 如在这里生成订单，
@@ -19,6 +18,7 @@ public class Tets {
 			//这里可以用一个sleep代替对其他业务逻辑的处理
 			//在处理这些业务逻辑的过程中，RealData被创建，从而充分利用等待的时间
 		//	Thread.sleep(3000);
+			System.out.println("执行主函数");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

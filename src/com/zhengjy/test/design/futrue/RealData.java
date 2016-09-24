@@ -11,10 +11,12 @@ public class RealData implements Data{
 	 * 这里模拟扣积分操作
 	 */
 	public RealData(String para){
+		System.out.println("扣积分开始begin");
+		
 		//RealData的构造可能很慢，需要用户等待很久，这里使sleep模拟
 		StringBuffer sb = new StringBuffer();
 		for(int i=0;i<10;i++){
-			sb.append(para);
+			sb.append(para+"-");
 			try {
 				//这里使用sleep，代替一个很慢的操作过程
 				Thread.sleep(1000);
@@ -24,6 +26,7 @@ public class RealData implements Data{
 			}
 		}
 		result=sb.toString();
+		System.out.println("扣积分开始end");
 	}
 	
 	@Override

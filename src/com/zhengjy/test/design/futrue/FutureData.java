@@ -20,15 +20,15 @@ public class FutureData implements Data{
 
 	@Override
 	public synchronized String getResult() {//会等待RealData构造完成
+		System.out.println("执行异步任务开始 begin");
 		while(!isReady){
 			try {
 				wait();//一直等待，直到RealData被注入
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		System.out.println("我被执行2.222");
+		System.out.println("执行异步任务结束  。。。end");
 		return realData.result;//由RealData实现
 	}
 
