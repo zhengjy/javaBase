@@ -9,8 +9,8 @@ import java.util.Set;
  * 执行一个深度优先搜索，当找到解决答案后结束搜索。
  * @author zhengjy
  *
- * @param <P>
- * @param <M>
+ * @param <P>位置类
+ * @param <M> 移动类
  */
 public class SequentialPuzzleSolver<P,M> {
 	private final Puzzle<P, M> puzzle;

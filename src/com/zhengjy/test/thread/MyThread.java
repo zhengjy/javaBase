@@ -1,6 +1,5 @@
 package com.zhengjy.test.thread;
 
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class MyThread extends Thread{
