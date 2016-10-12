@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 /**
  * 接收多个线程提交
  * Author：zhengjy
@@ -39,7 +40,7 @@ public class Callables {
 	 * @param callables
 	 * @return
 	 */
-	public <V> List<V> submitTask(Executor executor,List<Callable<V>> callables){
+	public <V> List<V> submitTask(ExecutorService executor,List<Callable<V>> callables){
 		
 		final CountDownLatch latch = new CountDownLatch(callables.size());//多少个线程
 		final ConcurrentMap<Integer, V> concurrent = new ConcurrentHashMap<Integer, V>();
@@ -61,6 +62,12 @@ public class Callables {
 					}
 				}
 			});
+			/*try {
+				executor.invokeAll(callables);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}*/
 		}
 		
 		try {

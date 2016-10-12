@@ -2,7 +2,7 @@ package com.zhengjy.test.concurrent.countDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 /**
- * CountDownLatch：可以用来在一个线程中等待多个线程完成任务的类。
+ * CountDownLatch闭锁：可以用来在一个线程中等待多个线程完成任务的类。
  * 使用场景：某个主线程接到一个任务，起了N个子线程去完成，但是主线程需要等待这N个线程都完成
  * 了任务以后才开始执行某个操作。
  * <br>
