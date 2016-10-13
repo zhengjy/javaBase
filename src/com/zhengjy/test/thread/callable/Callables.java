@@ -8,28 +8,29 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 /**
  * 接收多个线程提交
  * Author：zhengjy
  */
 public class Callables {
-	public static void main(String[] args) {
-		List<Callable<String>> callable  = new ArrayList<>();
-		callable.add(new Callable<String>() {
+	public static <V> void main(String[] args) {
+		List<Callable<V>> callable  = new ArrayList<Callable<V>>();
+		callable.add(new Callable<V>() {
 			@Override
-			public String call() throws Exception {
-				return "x1";
+			public V call() throws Exception {
+				return null;
 			}
 		});
 		
-		callable.add(new Callable<String>() {
+		callable.add(new Callable<V>() {
 			@Override
-			public String call() throws Exception {
-				return "x2";
+			public V call() throws Exception {
+				return null;
 			}
 		});
-		
-		
+		Executor executor = Executors.newCachedThreadPool();
+		submitTask(executor,callable);
 		
 		
 	}
@@ -40,7 +41,7 @@ public class Callables {
 	 * @param callables
 	 * @return
 	 */
-	public <V> List<V> submitTask(ExecutorService executor,List<Callable<V>> callables){
+	public static <V> List<V> submitTask(Executor executor,List<Callable<V>> callables){
 		
 		final CountDownLatch latch = new CountDownLatch(callables.size());//多少个线程
 		final ConcurrentMap<Integer, V> concurrent = new ConcurrentHashMap<Integer, V>();

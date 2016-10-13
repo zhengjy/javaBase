@@ -1,9 +1,10 @@
 package com.zhengjy.test.thread;
 
 public class Test {
-	public static   void get(int i){
+	static Object o = new Object();
+	public static  void get(int i){
 		try {
-			synchronized(){
+			synchronized(o){
 				Thread.sleep(1000);
 				System.out.println(Thread.currentThread().getName());
 				
