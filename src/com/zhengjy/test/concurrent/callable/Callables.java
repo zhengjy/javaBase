@@ -1,4 +1,4 @@
-package com.zhengjy.test.thread.callable;
+package com.zhengjy.test.concurrent.callable;
 
 import java.util.ArrayList;
 import java.util.List;

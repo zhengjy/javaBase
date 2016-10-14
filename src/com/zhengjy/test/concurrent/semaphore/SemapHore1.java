@@ -1,4 +1,4 @@
-package com.zhengjy.test.thread.concurrent.semaphore;
+package com.zhengjy.test.concurrent.semaphore;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
