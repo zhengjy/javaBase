@@ -27,6 +27,7 @@ class MyFutureTask extends java.util.concurrent.FutureTask<String>{
 	@Override
 	protected void done(){
 		try {
+			System.out.println(this);
 			System.out.println(get() +"线程执行完毕");
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
