@@ -89,6 +89,7 @@ public class ExecutorServiceTest {
 		});  
 		  
 		List<Future<String>> futures = executor.invokeAll(callables);  
+//		executor.invokeAll(tasks, timeout, unit);
 		for(Future<String> future : futures){  
 		    System.out.println("future.get = " + future.get());  
 		}  
