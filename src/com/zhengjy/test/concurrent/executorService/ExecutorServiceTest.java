@@ -82,7 +82,7 @@ public class ExecutorServiceTest {
 		        return "Task 2";  
 		    }  
 		});  
-		callables.add(new Callable<String>() {  
+		callables.add(new Callable<String>() {   
 		    public String call() throws Exception {  
 		        return "Task 3";  
 		    }  
