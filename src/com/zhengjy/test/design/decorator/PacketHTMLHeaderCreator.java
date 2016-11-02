@@ -17,7 +17,7 @@ public class PacketHTMLHeaderCreator  extends PacketDecorator{
 		StringBuffer sb = new StringBuffer();
 		sb.append("<html>")
 		.append("<body>").
-		append(component.handleContent())
+		append(super.component.handleContent())
 		.append("</body>").
 		append("</html>");
 		
