@@ -1,4 +1,4 @@
-package com.zhengjy.test.design.observer;
+ package com.zhengjy.test.design.observer;
 /**
  * 具体观察者角色：
  * 		该角色实现抽象观察者角色所有要更新的接口，以便使本身的状态与主题的状态相协调。通常用一个子类实现。
