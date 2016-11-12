@@ -1,12 +1,12 @@
 package com.zhengjy.test;
 
 
+import java.util.List;
+
 public class Test {
 	public static void main(String[] args) {
-		Long l1 = 2228L;
-		Long l2 = 228L;
-		System.out.println(l1.equals(l2));
-		
-		Thread.setDefaultUncaughtExceptionHandler(null);
-	}
+		System.out.println("xxxx");
+		List l = new  java.util.ArrayList();
+        System.out.println(l.size());
+    }
 }

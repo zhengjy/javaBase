@@ -1,4 +1,4 @@
-package com.zhengjy.test.design.demo.t1;
+package com.zhengjy.test.design.demo.t1策略模式;
 
 public abstract class Duck {
 	FlyBehavior flyBehavior;
@@ -19,3 +19,4 @@ public abstract class Duck {
 		quackBehavior.quack();
 	}
 }
+ 

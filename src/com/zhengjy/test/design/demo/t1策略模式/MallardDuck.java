@@ -1,4 +1,4 @@
-package com.zhengjy.test.design.demo.t1;
+package com.zhengjy.test.design.demo.t1策略模式;
 
 public class MallardDuck extends Duck{
 	public MallardDuck(FlyBehavior flyBehavior,QuackBehavior quackBehavior){
