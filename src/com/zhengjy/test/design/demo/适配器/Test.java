@@ -4,11 +4,11 @@ public class Test {
 	public static void main(String[] args) {
 		Duck duck = new MallardDuck();
 		Turkey turkey = new WildTurkey();
-		
+
 		System.out.println("-----------wildTurkey--------------");
 		turkey.gobble();
 		turkey.fly();
-		
+			
 		System.out.println("---------MallardDuck-----------");
 		duck.quack();
 		duck.fly();
